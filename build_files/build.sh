@@ -14,7 +14,9 @@ cp -avf "/ctx/system_files"/. /
 
 # this installs a package from fedora repos
 dnf5 install -y tmux
-
+dnf install snapd
+systemctl enable snapd.service
+/usr/bin/ln -sf /var/lib/snapd/snap /
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
